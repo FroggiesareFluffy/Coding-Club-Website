@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Coding Club </title>
+		<link type="text/css" rel="stylesheet" href="code.css"/>
+		<link type="text/css" rel="stylesheet" href="blog.css"/>
+	</head>
+	<body>
+	  <script>
+	    function toggleComments(name){
+	      table = document.getElementById(name).getElementById("comments")
+	      console.log(table)
+	      console.log(document.getElementById(name))
+	      if (table.display == "none"){
+	        table.display = "block"
+	      } else {
+	        table.display = "none"
+	      }
+	    }
+	  </script>
+		<script src="template.js"></script>
+		  <div class="blog_entry" id="Blog">
+			  <h2 class="title"> Blog </h2>
+			  <p class="blog"> This is a blog. Blogs are cool.
+			      Things that are not blogs are also cool!
+			      Stuff like coding blogs. We should do more of that.
+			      Also fill in blogs so they stand out more.
+			      More Blogging!!!
+			      This is just an example blog.
+			  </p>
+			  <h6 onClick="toggleComments('Blog')"> Two Comments </h6>
+			  <table id="comments" style="display=none;">
+			    <tr> <td> John Hiatt </td> <td> Awesome Blog! </td> </tr>
+			    <tr> <td> William <td> Really awesome. </td> </tr>
+			  </table>
+			</div>
+		</div>
+	</body>
+</html>

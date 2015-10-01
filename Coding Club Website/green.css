@@ -1,0 +1,49 @@
+body {
+  background-color: green;
+}
+
+#header {
+  color: #002200;
+}
+
+#nav {
+  background-color: #00cc00;
+  border-color: #00cc00;
+}
+
+#nav > li {
+  background-color: #22ff22;
+  border-color: #22ff22;
+}
+
+a {
+  color: green;
+}
+
+#body {
+  background-color: #00cc00;
+  border-color: #00cc00;
+}
+
+#sidebar {
+  background-color: green;
+  border-color: green;
+}
+
+h2 {
+  color: #002200;
+}
+
+h3 {
+  color: #002200;
+}
+
+h4 {
+  color: #002200;
+}
+
+h5 {
+  color: #002200;
+}
+
+
