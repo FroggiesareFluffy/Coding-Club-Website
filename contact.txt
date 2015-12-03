@@ -1,0 +1,5 @@
+			<h2> Meeting Time and Place </h2>
+			<h4> Room 641 during Thursday lunch </h4>
+			<h2>Leaders:</h2>
+			<h6><font size="4%">Mr. Franklin</font>: <a href="mailto:johnny.a.franklin@adams12.org">email</a></h6>
+

@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Blog </title>
+    <link type="text/css" rel="stylesheet" href="/stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="/nhs.css"/>
+    <link type="text/css" rel="stylesheet" href="/vampire.css"/>
+    <link type="text/css" rel="stylesheet" href="/green.css"/>
+    <link type="text/css" rel="stylesheet" href="/rainbow.css"/>
+    <link type="text/css" rel="stylesheet" href="/unicorn.css"/>
+    <link type="text/css" rel="stylesheet" href="/blog.css"/>
+    <script>
+function set_theme(newStyle) {
+    style = newStyle.options[newStyle.selectedIndex].value;
+    document.body.className = style;
+    document.cookie = "style=" + style;
+}
+function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2)
+        return parts.pop().split(";").shift();
+}
+function comment(blogname) {
+    var http = new XMLHttpRequest();
+    var name = document.getElementById("name-" + blogname);
+    var content = document.getElementById("content-" + blogname);
+    var params = "blog=" + blogname + "&name=" + name + "&content=" + content;
+    http.open("POST", window.location.href);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.setRequestHeader("Content-length", params.length);
+    http.setRequestHeader("Connection", "close");
+    http.send(params);
+}
+    </script>
+  </head>
+  <body class="NHS">
+    <h1 id="header">
+      Northglenn HS Coding Club
+    </h1>
+    <form name="styleselector">
+      <h5>
+        Theme:
+      </h5>
+      <select name="newStyle" onChange="set_theme(this.form.newStyle)">
+        <option value="NHS" id="NHS">
+          NHS
+        </option>
+        <option value="Vampire" id="Vampire">
+          Vampire
+        </option>
+        <option value="Green" id="Green">
+          Green
+        </option>
+        <option value="Rainbow" id="Rainbow">
+          Rainbow
+        </option>
+        <option value="Unicorn" id="Unicorn">
+          Unicorn
+        </option>
+      </select>
+    </form>
+    <script>
+var style = getCookie("style");
+if (style) {
+    console.log(style);
+    document.body.className = style;
+    document.getElementById(style).selected = true;
+}
+    </script>
+    <ul id="nav">
+      <li>
+        <a href="/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/links.html">Useful links</a>
+      </li>
+      <li>
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li>
+        <a href="/about.html">About</a>
+      </li>
+      <li>
+        <a href="/contact.html">Contact</a>
+      </li>
+    </ul>
+    <div id="body">
+      <table>
+        <tr>
+          <td>
+            <div id="sidebar">
+              <h3>
+                Past Blogs
+              </h3>
+              <ul>
+                <li>
+                  <a href='/blog/Awesomeness'>Awesomeness</a>
+                </li>
+                <li>
+                  <a href='/blog/More-Fluff'>More Fluff</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            <div id="blog_column">
+              <article class="blog">
+                <h2 class="blog_title">
+                  Awesomeness
+                </h2>
+                <div class="blog_entry">
+                  Cheeseburgers are fluffy. We should have more stuff here.
+    Do Stuff Now!
+    Cheese?
+                </div>
+                <h5>
+                  Comments: 1
+                </h5>
+                <table>
+                  <tr>
+                    <td class='name'>Person:</td>
+                    <td class='comment'>Fluffy!</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Name:<input type="text" id="name-Awesomeness">
+                    </td>
+                    <td>
+                      <input type="text" id="content-Awesomeness">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="button" value="Comment" onClick="comment('Awesomeness')">
+                    </td>
+                  </tr>
+                </table>
+              </article>
+              <article class="blog">
+                <h2 class="blog_title">
+                  More Fluff
+                </h2>
+                <div class="blog_entry">
+                  Cheeseburgers are fluffy. We should have more stuff here.
+    Do Stuff Now!
+    Cheese?
+    This is Coding Club, where we do challenges about apps, some of which involve code.
+                </div>
+                <h5>
+                  Comments: 3
+                </h5>
+                <table>
+                  <tr>
+                    <td class='name'>Person:</td>
+                    <td class='comment'>Extra Fluffy!</td>
+                  </tr>
+                  <tr>
+                    <td class='name'>Another Person:</td>
+                    <td class='comment'>Yay!</td>
+                  </tr>
+                  <tr>
+                    <td class='name'>John:</td>
+                    <td class='comment'>Cheese</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Name:<input type="text" id="name-More Fluff">
+                    </td>
+                    <td>
+                      <input type="text" id="content-More Fluff">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="button" value="Comment" onClick="comment('More Fluff')">
+                    </td>
+                  </tr>
+                </table>
+              </article>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

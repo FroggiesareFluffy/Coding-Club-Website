@@ -1,0 +1,5 @@
+<form method="post" action="blog.html">
+<label>Title: </label><input type="text" name="title">
+<input type="submit" value="Post">
+<div><textarea name="content" width="100%"></textarea></div>
+</form>
