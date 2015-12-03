@@ -1,0 +1,29 @@
+.NHS {
+  background-color: red;
+}
+
+.NHS #header {
+  color: gold;
+}
+
+.NHS #nav {
+  background-color: #880000;
+  border-color: #880000;
+}
+
+.NHS #nav > li {
+  background-color: orange;
+  border-color: orange;
+}
+
+
+.NHS #body {
+  background-color: gold;
+  border-color: gold;
+}
+
+.NHS #sidebar {
+  background-color: red;
+  border-color: red;
+}
+

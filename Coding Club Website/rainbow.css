@@ -1,0 +1,81 @@
+body {
+
+  background-color: orange;
+
+}
+
+
+/*
+
+
+#header {
+
+  color: #002200;
+
+}*/
+
+
+#nav {
+
+  background-color: red;
+
+  border-color: #cc0000;
+
+}
+
+
+#nav > li {
+
+  background-color: blue;
+
+  border-color: blue;
+
+}
+
+
+a {
+
+  color: #fe0;
+
+}
+
+
+#body {
+
+  background-color: #00cc00;
+
+  border-color: #00cc00;
+
+}
+
+
+#sidebar {
+
+  background-color: purple;
+
+  border-color: purple;
+
+}
+
+
+h3 {
+
+  color: violet;
+
+}
+
+
+h4 {
+
+  color: violet;
+
+}
+
+
+h5 {
+
+  color: violet;
+
+}
+
+

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title> %s </title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="nhs.css"/>
+    <link type="text/css" rel="stylesheet" href="vampire.css"/>
+    <link type="text/css" rel="stylesheet" href="green.css"/>
+    <link type="text/css" rel="stylesheet" href="rainbow.css"/>
+    <link type="text/css" rel="stylesheet" href="unicorn.css"/>
+    <script>
+      function set_theme(newStyle){
+        style = newStyle.options[newStyle.selectedIndex].value
+        document.body.className = style;
+        document.cookie = "style="+style;
+      }
+    </script>
+  </head>
+  <body class="NHS">
+    <script>
+      if (document.cookie.length > 0){
+        style = document.cookie.substr("style=".length);
+        document.body.className = style;
+      }
+    </script>
+    <h1 id="header"> Northglenn HS Coding Club </h1>
+    <form name="styleselector">
+      <h5>Theme:</h5>
+      <select name="newStyle" onChange="set_theme(this.form.newStyle)">
+        <option value="NHS" selected="expression(document.body.className=='NHS')"> NHS </option>
+        <option value="Vampire" selected="expression(document.body.className=='Vampire')"> Vampire </option>
+        <option value="Green" selected="expression(document.body.className=='Green')"> Green </option>
+        <option value="Rainbow" selected="expression(document.body.className=='Rainbow')"> Rainbow </option>
+        <option value="Unicorn" selected="expression(document.body.className=='Unicorn')"> Unicorn </option>
+      </select>
+    </form>
+		<ul id="nav">
+			<li> <a href="index.html"> Home </a> </li>
+			<li> <a href="links.html"> Useful links </a> </li>
+			<!--li> <a href="blog.html"> Blog </a> </li-->
+			<li> <a href="about.html"> About </a> </li>
+			<li> <a href="contact.html"> Contact </a> </li>
+		</ul>
+		<div id="body">
+%s
+    </div>
+  </body>
+</html>

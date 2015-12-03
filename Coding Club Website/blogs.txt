@@ -1,0 +1,12 @@
+Example Blog Entry
+This is a blog. There are 4 comments.
+..
+Cheese!
+Yay!
+Why?
+Awesome!
+-----
+Another Blog Entry
+This another blog. There are only two comments.
+
+

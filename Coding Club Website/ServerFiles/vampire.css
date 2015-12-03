@@ -1,0 +1,41 @@
+.Vampire {
+  background-color: black;
+}
+
+.Vampire #header {
+  color: yellow;
+}
+
+.Vampire #nav {
+  background-color: #cc0000;
+  border-color: #cc0000;
+}
+
+.Vampire #nav > li {
+  background-color: black;
+  border-color: black;
+}
+
+.Vampire a {
+  color: yellow;
+}
+
+.Vampire #body {
+  background-color: #cc0000;
+  border-color: #cc0000;
+}
+
+.Vampire #sidebar {
+  background-color: black;
+  border-color: black;
+}
+
+.Vampire h3 {
+  color: yellow;
+}
+
+.Vampire h5 {
+  color: yellow;
+}
+
+
