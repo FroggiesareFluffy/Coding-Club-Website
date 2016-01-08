@@ -1,0 +1,84 @@
+.Unicorn {
+  background-image: url("unicorn.jpg");
+  background-size: cover;
+}
+
+.Unicorn #header {
+  color: #c0c0ff;
+  text-shadow: 2px 2px 8px black;
+}
+
+.Unicorn #nav {
+  background-color: rgba(0,0,255,0.3);
+  border-color: #cdffff;
+}
+
+.Unicorn #nav > li {
+  background-color: rgba(0,0,255,0.4);
+  border-color: #cdffff;
+}
+
+.Unicorn a {
+  color: #cdffff;
+}
+
+.Unicorn #body {
+  background-color: rgba(0,0,255,0.4);
+  border-color: blue;
+}
+
+.Unicorn #sidebar {
+  background-color: rgba(224,255,255,0.7);
+  border-color: #cdffff;
+}
+
+.Unicorn table li {
+  color: white;
+}
+
+.Unicorn h2 {
+  color: #cdffff;
+}
+
+.Unicorn h3 {
+  color: black;
+}
+
+.Unicorn #sidebar > h4 {
+  color: black;
+}
+
+.Unicorn #body > h4 {
+  color: #cdffff;
+}
+
+
+.Unicorn h5 {
+  color: black;
+}
+
+.Unicorn #blog_column {
+  background-color: #00ff00;
+  border-color: #00ff00;
+}
+
+.Unicorn .blog_title {
+  background-color: #008000;
+  border-color: #008000;
+  color: #003000;
+}
+
+.Unicorn .blog_entry {
+  background-color: #008000;
+  border-color: #008000;
+}
+
+.Unicorn .name {
+  background-color: #009800;
+  border-color: #009800;
+}
+
+.Unicorn .comment {
+  background-color: #009800;
+  border-color: #009800;
+}

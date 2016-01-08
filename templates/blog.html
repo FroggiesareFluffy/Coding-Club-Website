@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <table>
+        <tr>
+            <td>
+                <div id="sidebar">
+                    <h3>Past Blogs</h3>
+                    <ul>
+                        {{ blog_list }}
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div id="blog_column">
+                    {{ body }}
+                </div>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

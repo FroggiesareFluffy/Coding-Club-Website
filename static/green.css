@@ -1,0 +1,57 @@
+.Green {
+  background-color: green;
+}
+
+.Green #header {
+  color: #002200;
+}
+
+.Green #nav {
+  background-color: #00cc00;
+  border-color: #00cc00;
+}
+
+.Green #nav > li {
+  background-color: #22ff22;
+  border-color: #22ff22;
+}
+
+.Green a {
+  color: #004000;
+}
+
+.Green #body {
+  background-color: #00cc00;
+  border-color: #00cc00;
+}
+
+.Green #sidebar {
+  background-color: green;
+  border-color: green;
+}
+
+.Green #blog_column {
+  background-color: #00ff00;
+  border-color: #00ff00;
+}
+
+.Green .blog_title {
+  background-color: #008000;
+  border-color: #008000;
+  color: #003000;
+}
+
+.Green .blog_entry {
+  background-color: #008000;
+  border-color: #008000;
+}
+
+.Green .name {
+  background-color: #009800;
+  border-color: #009800;
+}
+
+.Green .comment {
+  background-color: #009800;
+  border-color: #009800;
+}

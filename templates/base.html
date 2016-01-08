@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <title> {{ title }} </title>
+    <link type="text/css" rel="stylesheet" href="/stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="/nhs.css"/>
+    <link type="text/css" rel="stylesheet" href="/vampire.css"/>
+    <link type="text/css" rel="stylesheet" href="/green.css"/>
+    <link type="text/css" rel="stylesheet" href="/rainbow.css"/>
+    <link type="text/css" rel="stylesheet" href="/unicorn.css"/>
+    <link type="text/css" rel="stylesheet" href="/blog.css"/>
+    <script>
+      function set_theme(newStyle){
+        var style = newStyle.options[newStyle.selectedIndex].value;
+        document.body.className = style;
+        document.cookie = "style="+style+";path=/";
+      }
+      function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+      }
+      function comment(blogname){
+        var http = new XMLHttpRequest();
+        var name = document.getElementById("name-"+blogname).value;
+        var content = document.getElementById("content-"+blogname).value;
+        var params = "blog="+blogname+"&name="+name+"&content="+content;
+        http.open("POST",window.location.href,true);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.setRequestHeader("Content-length", params.length);
+        http.setRequestHeader("Connection", "close");
+        http.send(params);
+        document.getElementById("name-"+blogname).style.display = 'none';
+        document.getElementById("content-"+blogname).style.display = 'none';
+        document.getElementById("block-"+blogname).style.display = 'none';
+        document.getElementById("comment-"+blogname).style.display = 'none';
+        document.getElementById("text-"+blogname).innerHTML = "Your comment has been posted. Please refresh to see it.";
+      }
+    </script>
+  </head>
+  <body class="NHS">
+    <h1 id="header"> Northglenn HS Coding Club </h1>
+    <form name="styleselector" style="display: none">
+      <h5>Theme:</h5>
+      <select name="newStyle" onChange="set_theme(this.form.newStyle)">
+        <option value="NHS" id="NHS"> NHS </option>
+        <option value="Vampire" id="Vampire"> Vampire </option>
+        <option value="Green" id="Green"> Green </option>
+        <option value="Rainbow" id="Rainbow"> Rainbow </option>
+        <option value="Unicorn" id="Unicorn"> Unicorn </option>
+      </select>
+    </form>
+    <script>
+      /* global getCookie */
+      var style = getCookie("style");
+      console.log(style);
+      if (style){
+        console.log(style);
+        document.body.className = style;
+        document.getElementById(style).selected = true;
+      }
+      document.styleselector.style.display = 'block'
+    </script>
+    <ul id="nav">
+        <li> <a href="/index.html"> Home </a> </li>
+        <li> <a href="/links.html"> Useful links </a> </li>
+        <li> <a href="/blog.html"> Blog </a> </li>
+        <li> <a href="/about.html"> About </a> </li>
+        <li> <a href="/contact.html"> Contact </a> </li>
+    </ul>
+    <div id="body">
+        {% block body %}{{ body }}{% endblock %}
+    </div>
+  </body>
+</html>
