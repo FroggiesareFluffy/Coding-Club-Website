@@ -239,7 +239,7 @@ def load_website(blog=None):
     with open("template.txt") as template:
         website = HTML(template=template.read())
 
-    with open("blog_template.txt") as blog_template:
+    with open("blog.html") as blog_template:
         website.blog_template = blog_template.read()
         
     for page,title in (("index","Home"),
@@ -250,7 +250,7 @@ def load_website(blog=None):
         with open(page+".txt") as htmlpage:
             website.add_page(page+".html",title,htmlpage.read())
 
-    with open("error.txt") as error:
+    with open("error.html") as error:
         website.add_error(error.read())
 
     for stylesheet in ("stylesheet","nhs","vampire","green","rainbow","unicorn","blog"):
