@@ -1,0 +1,9 @@
+<BlogPage>
+  <Blog title='New Website'>
+The NGHS Coding club now has a website!&lt;br/>
+Notice that the "About" page is empty. What should go on it?
+    <Comment name='Josh'>It works and home coded in privet coding center not by lots of coding club members. Thay should do more than talk about things and JUST DO IT!!!!!!</Comment>
+    <Comment name='John'>How should I edit these comments? Should I just change them, or also show that it was changed?</Comment>
+    <Comment name='John'>Or should I not change them at all?</Comment>
+  </Blog>
+</BlogPage>
